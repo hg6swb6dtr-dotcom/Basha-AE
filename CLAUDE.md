@@ -11,6 +11,13 @@ The user is a beginner who speaks Telugu. Reply in simple romanized Telugu with 
 ## How to control After Effects
 This only works in a **local** session on the user's Mac with After Effects open.
 
+**Preferred: the `after-effects` MCP** (https://github.com/LiamcKerr/after-effects-mcp, installed at `~/after-effects-mcp`). When its tools are loaded:
+- Start with `ae_status`, then use `ae_list_items` / `ae_comp_info` to inspect.
+- Make changes with `ae_run_script`. Check the visual result with one `ae_preview_frame`, and render with `ae_render`.
+- When the bridge is unreachable, run `node ~/after-effects-mcp/scripts/doctor.mjs` and follow the fix table in its AGENTS.md.
+
+**Fallback (no MCP tools loaded):**
+
 - Write ExtendScript files in `scripts/` with the name pattern `NN_short_name.jsx`.
 - Run a script inside the open AE with `bridge/ae_run.sh scripts/<file>.jsx`. The script's last expression value is printed.
 - Read the current project state with `bridge/ae_run.sh bridge/ae_info.jsx`. It prints JSON with comps, layers and footage, and also writes it to `bridge/out/info.json`. Run it before editing an existing project and again afterwards to verify the change.
