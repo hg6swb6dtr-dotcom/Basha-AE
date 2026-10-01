@@ -38,5 +38,5 @@
     comp.openInViewer();
 
     app.endUndoGroup();
-    alert("Done! 'Hello_Test' composition ready. Spacebar nokki preview chudandi.");
+    return "Done! 'Hello_Test' composition ready. Spacebar nokki preview chudandi.";
 })();
