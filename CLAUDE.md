@@ -2,6 +2,12 @@
 
 The user is a beginner who speaks Telugu. Reply in simple romanized Telugu with short steps and no jargon.
 
+## Save tokens (the user asked for this)
+- Keep replies short: a few lines, no long explanations unless asked.
+- Don't re-read files or re-run `ae_info.jsx` without need. Run it once before and once after an edit.
+- Write a script once and test it once. Fix only what failed.
+- Don't use subagents.
+
 ## How to control After Effects
 This only works in a **local** session on the user's Mac with After Effects open.
 
